@@ -1,5 +1,5 @@
 # open-plateform
-open-plateform是由share猿社区发起的一个开放平台项目，社区旨在构建一个简单、灵活、高可用的企业级开放平台。社区欢迎每一位爱好技术的参与进来，和我们一个构建一个高可用的平台。
+open-plateform是由**share猿社区**发起的一个开放平台项目，社区旨在构建一个**简单、灵活、高可用**的企业级开放平台。社区真诚欢迎每一位爱好技术的极客朋友参与进来，和我们一起构建一个高可用的平台。
 ## 架构设计
 ### v1.0架构设计
 
@@ -10,7 +10,8 @@ open-plateform v1.0的架构设计是一套微服务架构，整体架构包含�
 
 
 ---
-**扫描以下公众号关注share猿社区↓↓↓↓↓↓↓↓**
+**↓↓↓↓↓↓↓↓扫描以下公众号关注share猿社区↓↓↓↓↓↓↓↓**
+
 ![](http://upload-images.jianshu.io/upload_images/3084894-e6e9a10cf3e08bba?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 更多内容请在**简书、掘金、CSDN**搜索**“Share猿”**找到社区哦！！！
