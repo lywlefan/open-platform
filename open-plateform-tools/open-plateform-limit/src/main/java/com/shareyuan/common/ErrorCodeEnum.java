@@ -3,6 +3,11 @@ package com.shareyuan.common;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+/**
+ * @Author : kent
+ * @Description : 错误枚举
+ * @Date : 11:32 2019/9/17
+ */
 @Getter
 @AllArgsConstructor
 public enum ErrorCodeEnum {

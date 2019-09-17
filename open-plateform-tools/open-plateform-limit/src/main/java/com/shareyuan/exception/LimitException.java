@@ -3,6 +3,11 @@ package com.shareyuan.exception;
 import com.shareyuan.common.ErrorCodeEnum;
 import lombok.Getter;
 
+/**
+ * @Author : kent
+ * @Description : 自定义异常
+ * @Date : 11:39 2019/9/17
+ */
 public class LimitException extends RuntimeException {
 
     @Getter

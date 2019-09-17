@@ -2,12 +2,19 @@ package com.shareyuan.utils;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * @Author : kent
+ * @Description : 字符串工具类
+ * @Date : 11:40 2019/9/17
+ */
 public class StringUtils extends org.apache.commons.lang3.StringUtils {
 
     /**
-     * 获取ip地址
-     * @param request
-     * @return
+     * @Author : kent
+     * @Description : 获取ip地址
+     * @Date : 11:39 2019/9/17
+     * @Params : request
+     * @Return: String
      */
     public static String getIP(HttpServletRequest request) {
         String ip = request.getHeader("x-forwarded-for");

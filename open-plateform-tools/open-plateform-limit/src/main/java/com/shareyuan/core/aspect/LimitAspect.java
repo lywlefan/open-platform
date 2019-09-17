@@ -1,7 +1,8 @@
-package com.shareyuan.aspect;
+package com.shareyuan.core.aspect;
 
 import com.shareyuan.annotation.Limit;
 import com.shareyuan.common.Constant;
+import com.shareyuan.common.LimitType;
 import com.shareyuan.exception.LimitException;
 import com.shareyuan.utils.RequestHolder;
 import com.shareyuan.utils.StringUtils;
@@ -28,6 +29,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @Author : kent
+ * @Description : 限流注解AOP
+ * @Date : 11:34 2019/9/17
+ */
 @Aspect
 @Component
 public class LimitAspect {
@@ -56,6 +62,7 @@ public class LimitAspect {
 
     @Pointcut("@annotation(com.winstar.annotation.Limit)")
     public void pointcut() {
+        
     }
 
     @Around("pointcut()")
