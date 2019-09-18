@@ -5,10 +5,11 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>open-plateform-api</artifactId>
+    <groupId>com.shareyuan</groupId>
+    <artifactId>open-plateform-base</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-    <description>open-plateform-api</description>
+    <description>open-plateform-base</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,9 +17,8 @@
     </properties>
 
     <modules>
-        <module>open-plateform-back-api</module>
-        <module>open-plateform-front-api</module>
+        <module>open-plateform-atom</module>
+        <module>open-plateform-oauth</module>
     </modules>
-
     
 </project>

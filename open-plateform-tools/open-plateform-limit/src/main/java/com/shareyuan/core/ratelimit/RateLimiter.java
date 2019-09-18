@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * @Author : kent
  * @Description : 限流接口
- * @Date : 11:37 2019/9/17
+ * @Date : 11:51 2019/9/17
  */
 public interface RateLimiter<C> extends StatefulConfigurable<C> {
 

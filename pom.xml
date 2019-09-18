@@ -19,7 +19,7 @@
     <modules>
         <module>open-plateform-api</module>
         <module>open-plateform-gateway</module>
-        <module>open-plateform-management</module>
+        <module>open-plateform-base</module>
         <module>open-plateform-parent</module>
         <module>open-plateform-tools</module>
     </modules>

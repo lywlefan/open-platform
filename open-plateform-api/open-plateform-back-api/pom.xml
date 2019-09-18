@@ -5,19 +5,28 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.shareyuan</groupId>
-    <artifactId>open-plateform-management</artifactId>
+    <artifactId>open-plateform-back-api</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-    <description>open-plateform-management</description>
+    <description>open-plateform-back-api</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
     </properties>
 
-    <modules>
-        
-    </modules>
+    <parent>
+        <groupId>com.shareyuan</groupId>
+        <artifactId>open-plateform-parent</artifactId>
+        <version>1.0.0</version>
+        <relativePath/>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+    </dependencies>
     
 </project>

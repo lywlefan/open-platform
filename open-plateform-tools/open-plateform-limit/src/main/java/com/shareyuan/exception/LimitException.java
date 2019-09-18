@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * @Author : kent
  * @Description : 自定义异常
- * @Date : 11:39 2019/9/17
+ * @Date : 11:51 2019/9/17
  */
 public class LimitException extends RuntimeException {
 
