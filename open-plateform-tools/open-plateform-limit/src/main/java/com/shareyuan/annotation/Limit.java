@@ -13,7 +13,7 @@ import java.lang.annotation.Target;
  * @Description : 限流注解
  * @Date : 11:24 2019/9/17
  */
-@Target(ElementType.METHOD)
+@Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Limit {
 

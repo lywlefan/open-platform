@@ -1,10 +1,8 @@
 package com.shareyuan.core.aspect;
 
 import com.shareyuan.annotation.Limit;
-import com.shareyuan.common.Constant;
 import com.shareyuan.common.LimitType;
 import com.shareyuan.exception.LimitException;
-import com.shareyuan.utils.RequestHolder;
 import com.shareyuan.utils.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -22,7 +20,6 @@ import org.springframework.scripting.support.ResourceScriptSource;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 import java.time.Instant;
 import java.util.ArrayList;
@@ -67,8 +64,8 @@ public class LimitAspect {
 
     @Around("pointcut()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
-        HttpServletRequest request = RequestHolder.getHttpServletRequest();
-        String appId = request.getHeader(Constant.HEADER_APPID);
+        //HttpServletRequest request = RequestHolder.getHttpServletRequest();
+        //String appId = request.getHeader(Constant.HEADER_APPID);
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method signatureMethod = signature.getMethod();
         Limit limit = signatureMethod.getAnnotation(Limit.class);
@@ -77,16 +74,16 @@ public class LimitAspect {
         if (StringUtils.isEmpty(key)) {
             switch (limitType) {
                 case IP:
-                    key = StringUtils.getIP(request);
+                    //key = StringUtils.getIP(request);
                     break;
                 case APP:
-                    key = appId;
+                    //key = appId;
                     break;
                 default:
                     key = signatureMethod.getName();
             }
         }
-        List<String> keys = getKeys(StringUtils.join(limit.prefix(), "_", key, "_", request.getRequestURI().replaceAll("/","_")));
+        List<String> keys = getKeys(StringUtils.join(limit.prefix(), "_", key, "_", "12"/*request.getRequestURI().replaceAll("/","_")*/));
         List<String> args = new ArrayList<>();
         args.add(String.valueOf(limit.rate()));
         args.add(String.valueOf(limit.capacity()));
@@ -102,7 +99,7 @@ public class LimitAspect {
             logger.info("key:{}访问成功,还可以获取{}个令牌", keys, result.get(1));
             return joinPoint.proceed();
         } else {
-            throw new LimitException("api_request_limit","api("+request.getRequestURI()+")请求频繁!");
+            throw new LimitException("api_request_limit","api("+"12"/*request.getRequestURI()*/+")请求频繁!");
         }
     }
     

@@ -20,13 +20,13 @@ import java.util.List;
  * @Description : redis配置类
  * @Date : 11:33 2019/9/17
  */
-@Configuration
-@AutoConfigureAfter(RedisReactiveAutoConfiguration.class)
-@ConditionalOnBean(ReactiveRedisTemplate.class)
-@ConditionalOnClass({RedisTemplate.class})
+//@Configuration
+//@AutoConfigureAfter(RedisReactiveAutoConfiguration.class)
+//@ConditionalOnBean(ReactiveRedisTemplate.class)
+//@ConditionalOnClass({RedisTemplate.class})
 public class LimitRedisAutoConfiguration {
 
-    @Bean
+    //@Bean
     @SuppressWarnings("unchecked")
     public RedisScript redisRequestRateLimiterScript() {
         DefaultRedisScript redisScript = new DefaultRedisScript<>();
