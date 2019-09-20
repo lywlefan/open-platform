@@ -1,8 +1,11 @@
 package com.shareyuan.core.aspect;
 
 import com.shareyuan.annotation.Limit;
+import com.shareyuan.common.Constant;
 import com.shareyuan.common.LimitType;
+import com.shareyuan.core.ReactiveRequestContextHolder;
 import com.shareyuan.exception.LimitException;
+import com.shareyuan.utils.RequestHolder;
 import com.shareyuan.utils.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -16,8 +19,11 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.scripting.support.ResourceScriptSource;
 import org.springframework.stereotype.Component;
+import org.springframework.web.reactive.function.client.ClientRequest;
+import reactor.core.publisher.Mono;
 
 import javax.annotation.PostConstruct;
 import java.lang.reflect.Method;
@@ -57,15 +63,16 @@ public class LimitAspect {
         getRedisScript.setScriptSource(new ResourceScriptSource(new ClassPathResource("META-INF/script/request_rate_limiter.lua")));
     }
 
-    @Pointcut("@annotation(com.winstar.annotation.Limit)")
+    @Pointcut("@annotation(com.shareyuan.annotation.Limit)")
     public void pointcut() {
         
     }
 
     @Around("pointcut()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
-        //HttpServletRequest request = RequestHolder.getHttpServletRequest();
-        //String appId = request.getHeader(Constant.HEADER_APPID);
+        Mono<ServerHttpRequest> requestMono = ReactiveRequestContextHolder.getRequest();
+        ServerHttpRequest request = requestMono.block();
+        String appId = request.getHeaders().getFirst(Constant.HEADER_APPID);
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method signatureMethod = signature.getMethod();
         Limit limit = signatureMethod.getAnnotation(Limit.class);
@@ -83,7 +90,7 @@ public class LimitAspect {
                     key = signatureMethod.getName();
             }
         }
-        List<String> keys = getKeys(StringUtils.join(limit.prefix(), "_", key, "_", "12"/*request.getRequestURI().replaceAll("/","_")*/));
+        List<String> keys = getKeys(StringUtils.join(limit.prefix(), "_", key, "_", request.getURI().getPath().replaceAll("/","_")));
         List<String> args = new ArrayList<>();
         args.add(String.valueOf(limit.rate()));
         args.add(String.valueOf(limit.capacity()));
@@ -99,7 +106,7 @@ public class LimitAspect {
             logger.info("key:{}访问成功,还可以获取{}个令牌", keys, result.get(1));
             return joinPoint.proceed();
         } else {
-            throw new LimitException("api_request_limit","api("+"12"/*request.getRequestURI()*/+")请求频繁!");
+            throw new LimitException("api_request_limit","api("+"12"+request.getURI().getPath()+")请求频繁!");
         }
     }
     
