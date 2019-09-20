@@ -26,7 +26,6 @@
         <logback.kafka.version>0.1.0</logback.kafka.version>
         <commons.lang3.version>3.8.1</commons.lang3.version>
         <mysql.version>5.1.20</mysql.version>
-        <winstar.interceptor.version>1.0.0</winstar.interceptor.version>
         <business.common.version>1.0.0</business.common.version>
         <guava.version>25.1-jre</guava.version>
     </properties>
