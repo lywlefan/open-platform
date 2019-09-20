@@ -1,4 +1,5 @@
 # open-plateform
+## 我们要做什么
 open-plateform是由**share猿社区**发起的一个开放平台项目，社区旨在构建一个**简单、灵活、高可用**的企业级开放平台。社区真诚欢迎每一位爱好技术的极客朋友参与进来，和我们一起构建一个高可用的平台。
 ## 架构设计
 ### v1.0架构设计
@@ -7,7 +8,33 @@ open-plateform是由**share猿社区**发起的一个开放平台项目，社区
 
 open-plateform v1.0的架构设计是一套微服务架构，整体架构包含：基础服务、内部服务、聚合服务、业务服务、授权服务、技术中台、api网关、前台、后台等。
 
+## 平台介绍
 
+### 项目结构
+
+```tree
+open-plateform
+|──open-plateform-api:开发平台api
+|  |──open-plateform-back-api：开放平台后台相关api
+|  |──open-plateform-front-api：开放平台前端api
+|──open-plateform-base:开放平台基础依赖
+|  |──open-plateform-atom：开放平台原子服务
+|  |──open-plateform-oauth：开放平台oauth认证
+|──open-plateform-gateway:开放平台网关层
+|  |──open-plateform-gateway-api：api网关层
+|  |──open-plateform-gateway-management：后台网关层
+|──open-plateform-parent:开放平台父pom依赖
+|──open-plateform-starters:开放平台stater（自己封装）
+|  |──open-plateform-limit：限流starter
+|──open-plateform-view：开发平台前端（前端小伙伴注意了！）
+|  |──open-plateform-view-management：开发平台后台页面
+```
+
+## 平台规划
+
+## 文档
+
+## 贡献
 
 ---
 **↓↓↓↓↓↓↓↓扫描以下公众号关注share猿社区↓↓↓↓↓↓↓↓**
