@@ -16,6 +16,13 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <parent>
+        <groupId>com.shareyuan</groupId>
+        <artifactId>open-platform-parent</artifactId>
+        <version>1.0.0</version>
+        <relativePath/>
+    </parent>
+
     <modules>
         
     </modules>
