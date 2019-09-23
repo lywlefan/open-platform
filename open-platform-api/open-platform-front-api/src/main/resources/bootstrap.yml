@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: open-plateform-front-api
+
+info:
+  app:
+    name: open-plateform-front-api
+    description: 开放平台api
+    version: 1.0.0
+    author: kent

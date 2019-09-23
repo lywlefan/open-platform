@@ -5,11 +5,10 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.shareyuan</groupId>
-    <artifactId>open-platform-starters</artifactId>
+    <artifactId>open-platform-api</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-    <description>open-platform-starters</description>
+    <description>open-platform-api</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,7 +16,9 @@
     </properties>
 
     <modules>
-        <module>open-plateform-limit</module>
+        <module>open-platform-back-api</module>
+        <module>open-platform-front-api</module>
     </modules>
+
     
 </project>

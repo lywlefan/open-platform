@@ -1,0 +1,19 @@
+server:
+    port: 30000
+
+spring:
+  redis:
+    host: 192.168.118.42
+    port: 6379
+    database: 7
+
+#注册中心配置
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    hostname: ${spring.cloud.client.ip-address}
+  client:
+    serviceUrl:
+      defaultZone:   http://eureka.didispace.com/eureka/
+    fetch-registry: true
+    register-with-eureka: true
