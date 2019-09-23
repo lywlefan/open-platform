@@ -1,4 +1,4 @@
-## open-plateform-limit
+## open-platform-limit
 
 一个适用于webflux的限流starter,目前规划有如下三种限流方式:
 
