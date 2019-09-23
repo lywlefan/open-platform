@@ -1,33 +1,33 @@
-# open-plateform
+# open-platform
 ## 我们要做什么
-open-plateform是由**share猿社区**发起的一个开放平台项目，社区旨在构建一个**简单、灵活、高可用**的企业级开放平台。社区真诚欢迎每一位爱好技术的极客朋友参与进来，和我们一起构建一个高可用的平台。
+open-platform是由**share猿社区**发起的一个开放平台项目，社区旨在构建一个**简单、灵活、高可用**的企业级开放平台。社区真诚欢迎每一位爱好技术的极客朋友参与进来，和我们一起构建一个高可用的平台。
 ## 架构设计
 ### v1.0架构设计
 
-![open-plateform架构设计_v1.0](https://github.com/lywlefan/open-platform/blob/master/docs/designs/open-plateform%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1_v1.0.png)
+![open-platform架构设计_v1.0](https://github.com/lywlefan/open-platform/blob/master/docs/designs/open-platform%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1_v1.0.png)
 
-open-plateform v1.0的架构设计是一套微服务架构，整体架构包含：基础服务、内部服务、聚合服务、业务服务、授权服务、技术中台、api网关、前台、后台等。
+open-platform v1.0的架构设计是一套微服务架构，整体架构包含：基础服务、内部服务、聚合服务、业务服务、授权服务、技术中台、api网关、前台、后台等。
 
 ## 平台介绍
 
 ### 项目结构
 
 ```tree
-open-plateform
-|──open-plateform-api:开发平台api
-|  |──open-plateform-back-api：开放平台后台相关api
-|  |──open-plateform-front-api：开放平台前端api
-|──open-plateform-base:开放平台基础依赖
-|  |──open-plateform-atom：开放平台原子服务
-|  |──open-plateform-oauth：开放平台oauth认证
-|──open-plateform-gateway:开放平台网关层
-|  |──open-plateform-gateway-api：api网关层
-|  |──open-plateform-gateway-management：后台网关层
-|──open-plateform-parent:开放平台父pom依赖
-|──open-plateform-starters:开放平台stater（自己封装）
-|  |──open-plateform-limit：限流starter
-|──open-plateform-view：开发平台前端（前端小伙伴注意了！）
-|  |──open-plateform-view-management：开发平台后台页面
+open-platform
+|──open-platform-api:开发平台api
+|  |──open-platform-back-api：开放平台后台相关api
+|  |──open-platform-front-api：开放平台前端api
+|──open-platform-base:开放平台基础依赖
+|  |──open-platform-atom：开放平台原子服务
+|  |──open-platform-oauth：开放平台oauth认证
+|──open-platform-gateway:开放平台网关层
+|  |──open-platform-gateway-api：api网关层
+|  |──open-platform-gateway-management：后台网关层
+|──open-platform-parent:开放平台父pom依赖
+|──open-platform-starters:开放平台stater（自己封装）
+|  |──open-platform-limit：限流starter
+|──open-platform-view：开发平台前端（前端小伙伴注意了！）
+|  |──open-platform-view-management：开发平台后台页面
 ```
 
 ## 平台规划
