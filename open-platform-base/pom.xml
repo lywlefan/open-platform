@@ -19,6 +19,7 @@
     <modules>
         <module>open-platform-atom</module>
         <module>open-platform-oauth</module>
+        <module>open-platform-eureka</module>
     </modules>
     
 </project>
