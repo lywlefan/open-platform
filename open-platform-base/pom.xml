@@ -6,10 +6,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.shareyuan</groupId>
-    <artifactId>open-plateform-base</artifactId>
+    <artifactId>open-platform-base</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-    <description>open-plateform-base</description>
+    <description>open-platform-base</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
