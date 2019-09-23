@@ -5,7 +5,6 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.shareyuan</groupId>
     <artifactId>open-platform-gateway-management</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
