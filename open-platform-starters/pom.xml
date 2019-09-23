@@ -17,7 +17,7 @@
     </properties>
 
     <modules>
-        <module>open-plateform-limit</module>
+        <module>open-platform-limit</module>
     </modules>
     
 </project>
