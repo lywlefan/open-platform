@@ -4,7 +4,7 @@ open-plateform是由**share猿社区**发起的一个开放平台项目，社区
 ## 架构设计
 ### v1.0架构设计
 
-![open-plateform架构设计_v1.0](https://github.com/lywlefan/open-plateform/blob/master/doc/design/open-plateform%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1_v1.0.png)
+![open-plateform架构设计_v1.0](https://github.com/lywlefan/open-platform/blob/master/docs/designs/open-plateform%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1_v1.0.png)
 
 open-plateform v1.0的架构设计是一套微服务架构，整体架构包含：基础服务、内部服务、聚合服务、业务服务、授权服务、技术中台、api网关、前台、后台等。
 
