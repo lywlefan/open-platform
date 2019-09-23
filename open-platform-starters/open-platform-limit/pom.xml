@@ -5,14 +5,14 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>open-plateform-limit</artifactId>
+    <artifactId>open-platform-limit</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-    <description>open-plateform-limit</description>
+    <description>open-platform-limit</description>
 
     <parent>
         <groupId>com.shareyuan</groupId>
-        <artifactId>open-plateform-parent</artifactId>
+        <artifactId>open-platform-parent</artifactId>
         <version>1.0.0</version>
         <relativePath/>
     </parent>

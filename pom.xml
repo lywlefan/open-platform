@@ -6,10 +6,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.shareyuan</groupId>
-    <artifactId>open-plateform</artifactId>
+    <artifactId>open-platform</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-    <description>open-plateform</description>
+    <description>open-platform</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,11 +17,11 @@
     </properties>
 
     <modules>
-        <module>open-plateform-api</module>
-        <module>open-plateform-gateway</module>
-        <module>open-plateform-base</module>
-        <module>open-plateform-parent</module>
-        <module>open-plateform-starters</module>
+        <module>open-platform-api</module>
+        <module>open-platform-gateway</module>
+        <module>open-platform-base</module>
+        <module>open-platform-parent</module>
+        <module>open-platform-starters</module>
     </modules>
     
 </project>
