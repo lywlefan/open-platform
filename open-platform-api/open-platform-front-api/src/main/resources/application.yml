@@ -13,7 +13,7 @@ eureka:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     hostname: ${spring.cloud.client.ip-address}
   client:
-    serviceUrl:
-      defaultZone: http://eureka.didispace.com
+    service-url:
+      defaultZone: http://127.0.0.1:19000/eureka/
     fetch-registry: true
     register-with-eureka: true
