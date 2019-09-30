@@ -2,7 +2,6 @@ server:
   port: 2000
 
 spring:
-  # สýพÝิด
   datasource:
     url: jdbc:mysql://192.168.118.8:23306/plate_form?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root

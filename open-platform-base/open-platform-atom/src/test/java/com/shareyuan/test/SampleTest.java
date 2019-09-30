@@ -1,6 +1,6 @@
 package com.shareyuan.test;
 
-import com.shareyuan.entity.User;
+import com.shareyuan.entity.Account;
 import com.shareyuan.mapper.UserMapper;
 import org.junit.Assert;
 import org.junit.Test;
@@ -21,7 +21,7 @@ public class SampleTest {
     @Test
     public void testSelect() {
         System.out.println(("----- selectAll method test ------"));
-        List<User> userList = userMapper.selectList(null);
+        List<Account> userList = userMapper.selectList(null);
         Assert.assertEquals(5, userList.size());
         userList.forEach(System.out::println);
     }
