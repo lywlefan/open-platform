@@ -1,7 +1,7 @@
 package com.shareyuan.test;
 
 import com.shareyuan.entity.Account;
-import com.shareyuan.mapper.UserMapper;
+import com.shareyuan.mapper.AccountMapper;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,7 +16,7 @@ import java.util.List;
 public class SampleTest {
 
     @Resource
-    private UserMapper userMapper;
+    private AccountMapper userMapper;
 
     @Test
     public void testSelect() {

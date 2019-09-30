@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.shareyuan.dto.AccountDto;
 import com.shareyuan.entity.Account;
-import com.shareyuan.mapper.UserMapper;
+import com.shareyuan.mapper.AccountMapper;
 import com.shareyuan.service.AccountService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,9 +13,9 @@ import org.springframework.stereotype.Service;
 
 @Service("accountService")
 @AllArgsConstructor
-public class AccountServiceImpl extends ServiceImpl implements AccountService {
+public class AccountServiceImpl extends ServiceImpl<AccountMapper,Account> implements AccountService {
 
-    UserMapper userMapper;
+    AccountMapper userMapper;
 
     @Override
     public Account save(AccountDto accountDto) {
